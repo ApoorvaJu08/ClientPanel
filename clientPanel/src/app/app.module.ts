@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 import { environment } from './../environments/environment.prod';
 import { AngularFireModule } from '@angular/fire';
@@ -40,7 +41,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, 'ClientPanel'),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
