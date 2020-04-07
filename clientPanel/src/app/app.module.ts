@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { environment } from './../environments/environment.prod';
 import { AngularFireModule } from '@angular/fire';
@@ -43,7 +44,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AngularFirestoreModule,
     AngularFireAuthModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlashMessagesModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
