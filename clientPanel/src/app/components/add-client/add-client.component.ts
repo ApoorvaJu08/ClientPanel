@@ -31,11 +31,11 @@ export class AddClientComponent implements OnInit {
   }
 
   onSubmit({value, valid}: {value: Client, valid: boolean}) {
-    if (this.disableBalanceOnAdd) {
+    if(this.disableBalanceOnAdd) {
       value.balance = 0;
     }
 
-    if (!valid) {
+    if(!valid) {
       // Show error
       this.flashMessage.show('Please fill out the form correctly', {
         cssClass: 'alert-danger', timeout: 4000
