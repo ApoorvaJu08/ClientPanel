@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-6">
-      <a routerLink="/" class="btn btn-link">
-        <i class="fa fa-arrow-circle-o-left"></i> Back To Dashboard
+      <a routerLink="/client/{{ id }}" class="btn btn-link">
+        <i class="fa fa-arrow-circle-o-left"></i> Back To Client
       </a>
     </div>
     <div class="col-md-6">
@@ -11,7 +11,7 @@
   
   <div class="card">
     <div class="card-header">
-      Add Client
+      Edit Client
     </div>
     <div class="card-body">
       <form #clientForm="ngForm" (ngSubmit)="onSubmit(clientForm)">
@@ -110,7 +110,7 @@
                   [(ngModel)]="client.balance"
                   name="balance"
                   #clientBalance = "ngModel"
-                  [disabled]="disableBalanceOnAdd"
+                  [disabled]="disableBalanceOnEdit"
                 >
               </div>
   
